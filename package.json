@@ -1,7 +1,14 @@
 {
   "name": "reactjs-github-repoexplorer-web",
   "version": "0.1.0",
+  "main": "index.js",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -16,11 +23,8 @@
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "yarn": "^1.22.17"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "repository": "https://github.com/alisonsantosofc/reactjs-github-repoexplorer-app.git",
+  "author": "Alison Santos <alisonsantoso22@gmail.com>",
+  "license": "MIT"
 }
