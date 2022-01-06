@@ -1,9 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-function App() {
+import Routes from './routes';
+import GlobalStyle from './styles/global';
+
+const App: React.FunctionComponent = () => {
   return (
-    <h1>Hello Friends!</h1>
+    <>
+      <Router>
+        <Routes />
+      </Router>
+      <GlobalStyle />
+    </>
   );
-}
+};
 
 export default App;

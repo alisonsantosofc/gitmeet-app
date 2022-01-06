@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 290 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16002 7.16002 0 16 0C24.84 0 32 7.16002 31.9999 16C31.9999 24.832 24.8399 31.9999 16 31.9999C7.16002 31.9999 0 24.832 0 16ZM6.39997 25.6L19.504 19.504L25.6 6.39997L12.496 12.496L6.39997 25.6ZM17.76 16C17.76 16.968 16.9759 17.76 16 17.76C15.032 17.76 14.2399 16.968 14.2399 16C14.2399 15.0319 15.0319 14.2399 16 14.2399C16.976 14.2399 17.76 15.0319 17.76 16Z" fill="#121214"/>
+  <text style="fill: rgb(114, 114, 125); font-family: &quot;Cascadia Code&quot;; font-size: 6.4px; white-space: pre;" transform="matrix(3.558584, 0, 0, 3.447761, -85.274628, -125.924828)" x="34.618" y="43.626">GitHub</text>
+  <text style="fill: rgb(168, 169, 182); font-family: &quot;Cascadia Code&quot;; font-size: 6.4px; white-space: pre;" transform="matrix(3.558584, 0, 0, 3.447761, -6.788664, -125.79541)" x="34.618" y="43.626">_RepoExplorer</text>
+</svg>
