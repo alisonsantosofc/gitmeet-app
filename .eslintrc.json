@@ -33,6 +33,11 @@
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-no-bind": [
+      {
+      "allowFunctions": true
+      }
+    ],
     "react/function-component-definition": [
       2,
       {
