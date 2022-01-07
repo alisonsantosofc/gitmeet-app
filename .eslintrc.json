@@ -34,8 +34,10 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-no-bind": [
+      2,
       {
-      "allowFunctions": true
+      "allowFunctions": true,
+      "allowArrowFunctions": true
       }
     ],
     "react/function-component-definition": [
