@@ -11,7 +11,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #f0f0f5 url(${githubBackground}) no-repeat 70% top;
+    background: #f0f0f5 url(${githubBackground}) fixed no-repeat 80% top;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -25,7 +25,7 @@ export default createGlobalStyle`
   }
 
   #root {
-    max-width: 960px;
+    max-width: 1180px;
     margin: 0 auto;
     padding: 20px 20px;
   }

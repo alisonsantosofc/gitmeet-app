@@ -8,7 +8,11 @@ const MainRoutes: React.FunctionComponent = () => {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />;
-      <Route path="/repository" element={<Repository />} />;
+      <Route path="/repositories/" element={<Repository />}>
+        <Route path=":user">
+          <Route path=":repository" />
+        </Route>
+      </Route>
     </Routes>
   );
 };
