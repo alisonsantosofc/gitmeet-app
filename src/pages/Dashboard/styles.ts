@@ -208,3 +208,31 @@ export const Repositories = styled.div`
     }
   }
 `;
+
+export const Pagination = styled.div`
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+
+  button {
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    color: #fff;
+    background-color: #007cec;
+
+    & + button {
+      margin-left: 0.5rem;
+    }
+
+    &:hover {
+      background: ${lighten(0.1, '#007cec')};
+    }
+
+    &:active {
+      background: ${lighten(0, '#007cec')};
+    }
+  }
+`;

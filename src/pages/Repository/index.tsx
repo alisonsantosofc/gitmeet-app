@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 import api from '../../services/api';
-import { Header, RepositoryInfo, Issues } from './styles';
+import { Header, RepositoryInfo, Issues, Pagination } from './styles';
 
 import logoImg from '../../assets/logo.svg';
 
@@ -31,6 +31,16 @@ interface Issue {
 const Repository: React.FunctionComponent = () => {
   const [repositoryData, setRepositoryData] = useState<Repository | null>(null);
   const [issues, setIssues] = useState<Issue[]>([]);
+
+  const [issuesPerPage, setIssuesPerPage] = useState(5);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const pages = Math.ceil(issues.length / issuesPerPage);
+
+  const startIndex = currentPage * issuesPerPage;
+  const endIndex = startIndex + issuesPerPage;
+
+  const currentIssues = issues.slice(startIndex, endIndex);
 
   const { user, repository } = useParams();
 
@@ -87,7 +97,7 @@ const Repository: React.FunctionComponent = () => {
       )}
 
       <Issues>
-        {issues.map((issue) => (
+        {currentIssues.map((issue) => (
           <a key={issue.id} href={issue.html_url}>
             <div>
               <strong>{issue.title}</strong>
@@ -98,6 +108,24 @@ const Repository: React.FunctionComponent = () => {
           </a>
         ))}
       </Issues>
+
+      <Pagination>
+        {Array.from(Array(pages), (page, index) => {
+          return (
+            <button
+              onClick={(event) =>
+                setCurrentPage(
+                  Number((event.target as HTMLButtonElement).value)
+                )
+              }
+              value={index}
+              type="button"
+            >
+              {index + 1}
+            </button>
+          );
+        })}
+      </Pagination>
     </>
   );
 };
