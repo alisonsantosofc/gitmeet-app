@@ -5,26 +5,61 @@ interface FormProps {
   hasError: boolean;
 }
 
-export const Title = styled.h1`
-  font-size: 42px;
-  color: #3a3a3a;
-  max-width: 450px;
-  line-height: 56px;
-  margin-top: 70px;
+export const Header = styled.div`
+  img {
+    width: 400px;
+  }
+
+  @media (max-width: 520px) {
+    img {
+      width: 350px;
+    }
+  }
+`;
+
+export const Title = styled.div`
+  width: 100%;
+  margin-top: 4rem;
+
+  h1 {
+    width: 40%;
+    font-size: 2.5rem;
+    color: #3a3a3a;
+    line-height: 3.5rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+
+    h1 {
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 520px) {
+    h1 {
+      line-height: 3rem;
+    }
+  }
 `;
 
 export const Form = styled.form<FormProps>`
-  margin-top: 40px;
-  max-width: 700px;
+  margin-top: 2rem;
+  width: 70%;
   display: flex;
 
   input {
     flex: 1;
-    height: 70px;
-    padding: 0 24px;
+    height: 4rem;
+    padding: 0 1.5rem;
     border: 2px solid #fff;
     border-right: 0;
-    border-radius: 5px 0 0 5px;
+    border-radius: 0.4rem 0 0 0.4rem;
     color: #5c5c5c;
 
     ${(props) =>
@@ -40,10 +75,10 @@ export const Form = styled.form<FormProps>`
 
   button {
     width: 210px;
-    height: 70px;
+    height: 4rem;
     background: #007cec;
     border: 0;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 0.4rem 0.4rem 0;
     color: #fff;
     font-weight: bold;
     transition: background-color 0.2s;
@@ -56,30 +91,59 @@ export const Form = styled.form<FormProps>`
       background: ${lighten(0, '#007cec')};
     }
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 520px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      height: 5rem;
+      padding: 1rem 1.5rem;
+      border: 2px solid #fff;
+      border-radius: 0.4rem;
+      color: #5c5c5c;
+    }
+
+    button {
+      width: 30%;
+      height: 2.5rem;
+      margin-top: 0.5rem;
+      border-radius: 0.4rem;
+    }
+  }
 `;
 
 export const Error = styled.span`
   display: block;
   color: #ff2828;
   margin-top: 8px;
+
+  @media (max-width: 520px) {
+    text-align: center;
+  }
 `;
 
 export const Repositories = styled.div`
-  margin-top: 40px;
-  max-width: 700px;
+  margin-top: 4rem;
+  width: 70%;
 
   a {
     background: #fff;
-    border-radius: 5px;
+    border-radius: 0.4rem;
     width: 100%;
-    padding: 24px;
+    padding: 1.5rem;
     text-decoration: none;
     display: flex;
     align-items: center;
     transition: transform 0.2s;
 
     & + a {
-      margin-top: 10px;
+      margin-top: 0.5rem;
     }
 
     &:hover {
@@ -94,16 +158,16 @@ export const Repositories = styled.div`
 
     div {
       flex: 1;
-      margin: 0 16px;
+      margin: 0 1rem;
 
       strong {
-        font-size: 18px;
+        font-size: 1.2rem;
         color: #3d3d4d;
       }
 
       p {
-        margin-top: 4px;
-        font-size: 16px;
+        margin-top: 0.2rem;
+        font-size: 1rem;
         color: #a8a8b3;
       }
     }
@@ -111,6 +175,36 @@ export const Repositories = styled.div`
     svg {
       margin-left: auto;
       color: #cbcbd6;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 520px) {
+    a {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 128px;
+        height: 128px;
+      }
+
+      div {
+        margin-top: 1rem;
+        text-align: center;
+
+        strong {
+          font-size: 1.1rem;
+        }
+      }
+
+      svg {
+        margin-top: 0.2rem;
+      }
     }
   }
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { lighten } from 'polished';
 
 export const Header = styled.header`
   display: flex;
@@ -8,23 +9,46 @@ export const Header = styled.header`
   a {
     display: flex;
     align-items: center;
-    font-size: 22px;
+    padding: 0.4rem;
+    font-size: 1.2rem;
     text-decoration: none;
-    color: #a8a8b3;
-    transition: color 0.2s;
+    color: #fff;
+    background-color: #007cec;
+    border-radius: 0.2rem;
+    transition: background-color 0.2s;
 
     &:hover {
-      color: #666;
+      background-color: ${lighten(0.1, '#007cec')};
+    }
+
+    &:active {
+      background: ${lighten(0, '#007cec')};
     }
 
     svg {
-      margin-right: 4px;
+      margin-right: 0.2rem;
+    }
+  }
+
+  @media (max-width: 520px) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: center;
+
+    img {
+      width: 350px;
+      margin-top: 1rem;
+    }
+
+    a {
+      padding: 0.2rem;
+      font-size: 1rem;
     }
   }
 `;
 
 export const RepositoryInfo = styled.section`
-  margin-top: 70px;
+  margin-top: 5rem;
 
   header {
     display: flex;
@@ -37,17 +61,17 @@ export const RepositoryInfo = styled.section`
     }
 
     div {
-      margin-left: 24px;
+      margin-left: 1.5rem;
 
       strong {
-        font-size: 36px;
+        font-size: 2.2rem;
         color: #3d3d4d;
       }
 
       p {
-        font-size: 18px;
+        font-size: 1.2rem;
         color: #737380;
-        margin-top: 4px;
+        margin-top: 0.2rem;
       }
     }
   }
@@ -55,45 +79,88 @@ export const RepositoryInfo = styled.section`
   ul {
     display: flex;
     list-style: none;
-    margin-top: 40px;
+    margin-top: 2.5rem;
 
     li {
       text-align: center;
 
       & + li {
-        margin-left: 50px;
+        margin-left: 3.5rem;
       }
 
       strong {
         display: block;
-        font-size: 36px;
+        font-size: 2.2rem;
         color: #3d3d4d;
       }
 
       span {
         display: block;
-        margin-top: 4px;
+        margin-top: 0.2rem;
         color: #6c6c80;
+      }
+    }
+  }
+
+  @media (max-width: 520px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+
+    header {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      img {
+        margin-bottom: 1rem;
+      }
+    }
+
+    ul {
+      margin-top: 1.5rem;
+
+      li {
+        text-align: center;
+
+        & + li {
+          margin-left: 2rem;
+        }
+
+        strong {
+          display: block;
+          font-size: 2.2rem;
+          color: #3d3d4d;
+        }
+
+        span {
+          display: block;
+          margin-top: 0.2rem;
+          color: #6c6c80;
+        }
       }
     }
   }
 `;
 
 export const Issues = styled.section`
-  margin-top: 40px;
+  margin-top: 4rem;
 
   a {
     background: #fff;
-    border-radius: 5px;
+    border-radius: 0.4rem;
     width: 100%;
-    padding: 24px;
+    padding: 1.5rem;
     text-decoration: none;
     display: flex;
     align-items: center;
     transition: transform 0.2s;
 
     & + a {
-      margin-top: 10px;
+      margin-top: 0.8rem;
     }
 
     &:hover {
@@ -102,16 +169,16 @@ export const Issues = styled.section`
 
     div {
       flex: 1;
-      margin: 0 16px;
+      margin: 0 1rem;
 
       strong {
-        font-size: 18px;
+        font-size: 1.2rem;
         color: #3d3d4d;
       }
 
       p {
-        margin-top: 4px;
-        font-size: 16px;
+        margin-top: 0.2rem;
+        font-size: 1rem;
         color: #a8a8b3;
       }
     }
@@ -119,6 +186,20 @@ export const Issues = styled.section`
     svg {
       margin-left: auto;
       color: #cbcbd6;
+    }
+  }
+
+  @media (max-width: 520px) {
+    a {
+      div {
+        strong {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
     }
   }
 `;
