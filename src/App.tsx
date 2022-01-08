@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import Routes from './routes';
-import GlobalStyle from './styles/global';
+import GlobalStyle, { Footer } from './styles/global';
 
 const App: React.FunctionComponent = () => {
   return (
@@ -10,6 +10,10 @@ const App: React.FunctionComponent = () => {
       <Router>
         <Routes />
       </Router>
+      <Footer>
+        &copy; 2022 Developed By
+        <a href="https://github.com/alisonsantosofc"> Alison Santos</a>
+      </Footer>
       <GlobalStyle />
     </>
   );

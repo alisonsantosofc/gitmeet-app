@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+import { lighten } from 'polished';
 
 import githubBackground from '../assets/github-background.svg';
 
@@ -29,5 +30,23 @@ export default createGlobalStyle`
     max-width: 1180px;
     margin: 0 auto;
     padding: 20px 20px;
+  }
+`;
+
+export const Footer = styled.footer`
+  margin-top: 1rem;
+  text-align: center;
+
+  a {
+    color: #5c5c5c;
+    text-decoration: none;
+
+    &:hover {
+      color: ${lighten(0.1, '#007cec')};
+    }
+
+    &:active {
+      color: ${lighten(0, '#007cec')};
+    }
   }
 `;
