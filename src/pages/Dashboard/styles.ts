@@ -211,9 +211,6 @@ export const Repositories = styled.div`
 
 export const Pagination = styled.div`
   width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: 1rem;
 
   button {
@@ -234,5 +231,12 @@ export const Pagination = styled.div`
     &:active {
       background: ${lighten(0, '#007cec')};
     }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 `;
