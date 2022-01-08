@@ -6,7 +6,7 @@
 <h1 align="center">GitHub RepoExplorer</h1>
 <p align="center">App to explore github repositories</p>
 
-<p align="center"><a href="https://alisonsantosofc.github.io/vanillajs-quiz-app/">Click here to access the deploy</a></p>
+<p align="center"><a href="https://githubrepoexplorer.netlify.app/">Click here to access the deploy</a></p>
 <br>
 
 <div align="center">
