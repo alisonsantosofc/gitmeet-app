@@ -35,10 +35,10 @@
 <div align="center" id="starting">
   <h1>Starting</h1>
   <p>1.Clone the repository with the following command.</p>
-  <p><b>git clone https://github.com/alisonsantosofc/reactjs-github-repoexplorer-app</b></p>
+  <p><b>git clone https://github.com/alisonsantosofc/react-github-repoexplorer-app</b></p>
 
   <p>2.Navigate to the project folder with the following command.</p>
-  <p><b>cd reactjs-github-repoexplorer-app</b></p>
+  <p><b>cd react-github-repoexplorer-app</b></p>
 
   <p>3.Run this command to install dependencies.</p>
   <p><b>yarn</b></p>
