@@ -1,11 +1,13 @@
-export function RepositoryListItem(props) {
-  return (
-    <li>
-      <strong>{props.repository.name}</strong>
-      <p>{props.repository.description}</p>
+import './RepositoryListItem.scss';
 
-      <a href={props.repository.link}>]
-        Acessar repositório
+export function RepositoryListItem({repository}) {
+  return (
+    <li className="repository-list-item">
+      <strong>{repository.name}</strong>
+      <p>{repository.description}</p>
+
+      <a href={repository.html_url} target={'_blank'}>
+        Acessar no github
       </a>
     </li>
   )

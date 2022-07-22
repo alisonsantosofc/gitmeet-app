@@ -4,8 +4,33 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #2c303b;
-  color: #ecf1f5;
-  font-family: 'Lucida Sans', sans-serif;
+textarea, input {
+  &:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }
 }
+
+a {
+  text-decoration: none;
+  color: #f5f7fa;
+}
+
+input, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+div.main-enviroment {
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  width: 100%;
+  min-height: 100vh;
+  color: #2c303b;
+  padding: 40px;
+}
+

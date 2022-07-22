@@ -1,0 +1,29 @@
+li.repository-list-item {
+  background: #c6d4ed;
+  border-radius: 4px;
+  padding: 16px;
+
+  & + li {
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #545b69;
+  }
+
+  a {
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 16px;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #ecf1f5;
+    background: #1480ec;
+
+    &:hover {
+      background: lighten($color: #1480ec, $amount: 4);
+    }
+  }
+}
