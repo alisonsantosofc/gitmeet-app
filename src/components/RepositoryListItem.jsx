@@ -1,5 +1,7 @@
 import './RepositoryListItem.scss';
 
+import background from '../assets/github-background.svg';
+
 export function RepositoryListItem({repository}) {
   return (
     <li className="repository-list-item">
@@ -9,6 +11,8 @@ export function RepositoryListItem({repository}) {
       <a href={repository.html_url} target={'_blank'}>
         Acessar no github
       </a>
+
+      <img src={background} alt="background" />
     </li>
   )
 };

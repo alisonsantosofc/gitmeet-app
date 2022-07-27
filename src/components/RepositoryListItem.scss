@@ -1,19 +1,31 @@
 li.repository-list-item {
   background: #c6d4ed;
   border-radius: 4px;
-  padding: 16px;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 150px;
 
   & + li {
     margin-top: 20px;
   }
 
+  strong {
+    font-size: 1.4rem;
+  }
+
   p {
     font-size: 14px;
     color: #545b69;
+    max-height: 40px;
+    overflow: hidden;
   }
 
   a {
     display: inline-block;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
     font-size: 14px;
     margin-top: 16px;
     padding: 5px 10px;
@@ -25,5 +37,12 @@ li.repository-list-item {
     &:hover {
       background: lighten($color: #1480ec, $amount: 4);
     }
+  }
+
+  img {
+    width: 120px;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.8rem;
   }
 }
