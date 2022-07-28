@@ -10,13 +10,17 @@ export function App() {
   const [userName, setUserName] = useState('');
 
   useEffect(() => {
-    setUserName(localStorage.getItem('userName'));
-  }, [])
+    const localUserName = localStorage.getItem('userName');
+    
+    if (localUserName) {
+      setUserName(localUserName);
+    }
+  }, []);
   
   return (
     <div className={`main-enviroment`}>
       {!userName && <SignIn setUserName={setUserName} />}
-      {userName && <Navbar userName={userName} setUserName={setUserName}/>}
+      {userName && <Navbar userName={userName} />}
       {userName && <RepositoryList userName={userName} />}
     </div>
   );
